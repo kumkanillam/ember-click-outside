@@ -59,11 +59,11 @@ export default Ember.Mixin.create({
 
   addClickOutsideListener() {
     const clickHandler = this.get('clickHandler');
-    $(window).on('click', clickHandler);
+    $(window).on('mousedown', clickHandler);
   },
 
   removeClickOutsideListener() {
     const clickHandler = this.get('clickHandler');
-    $(window).off('click', clickHandler);
+    $(window).off('mousedown', clickHandler);
   }
 });
